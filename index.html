@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord-like Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar with server list -->
+        <div class="servers-sidebar">
+            <div class="server-icon home">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="server-divider"></div>
+            <div class="server-icon active">
+                <span>GC</span>
+            </div>
+            <div class="server-icon">
+                <span>JS</span>
+            </div>
+            <div class="server-icon add-server">
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+
+        <!-- Channels sidebar -->
+        <div class="channels-sidebar">
+            <div class="server-header">
+                <h3>Gaming Chat</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="channels-container">
+                <div class="channel-category">
+                    <div class="category-header">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>TEXT CHANNELS</span>
+                    </div>
+                    <div class="channel active">
+                        <i class="fas fa-hashtag"></i>
+                        <span>general</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-hashtag"></i>
+                        <span>gaming</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-hashtag"></i>
+                        <span>memes</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>VOICE CHANNELS</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-volume-up"></i>
+                        <span>General Voice</span>
+                    </div>
+                    <div class="channel">
+                        <i class="fas fa-volume-up"></i>
+                        <span>Gaming Voice</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-panel">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/32" alt="User Avatar">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="user-details">
+                        <span class="username">User123</span>
+                        <span class="status">Online</span>
+                    </div>
+                </div>
+                <div class="user-controls">
+                    <i class="fas fa-microphone"></i>
+                    <i class="fas fa-headphones"></i>
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main chat area -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-header-left">
+                    <i class="fas fa-hashtag"></i>
+                    <span>general</span>
+                </div>
+                <div class="chat-header-right">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-pin"></i>
+                    <i class="fas fa-user-friends"></i>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <i class="fas fa-inbox"></i>
+                    <i class="fas fa-question-circle"></i>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be added here by JavaScript -->
+            </div>
+
+            <div class="message-input-container">
+                <div class="message-input-wrapper">
+                    <button class="attachment-btn">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                    <input type="text" id="message-input" placeholder="Message #general">
+                    <div class="message-input-buttons">
+                        <i class="fas fa-gift"></i>
+                        <i class="fas fa-file-image"></i>
+                        <i class="fas fa-smile"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info sidebar (replaces members sidebar) -->
+        <div class="members-sidebar">
+            <div class="info-section">
+                <h3>ABOUT THIS APP</h3>
+                <div class="info-content">
+                    <p>This is your personal chat space. All messages are stored locally on your device.</p>
+                    <p>Use the settings icon in the bottom left to customize your username and avatar color.</p>
+                    <p>You can delete messages by hovering over them and clicking the X that appears.</p>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>EMOJI SHORTCUTS</h3>
+                <div class="emoji-list">
+                    <div class="emoji-item">
+                        <span class="emoji">😊</span>
+                        <span class="shortcut">:smile:</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">😂</span>
+                        <span class="shortcut">:laugh:</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">😢</span>
+                        <span class="shortcut">:sad:</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">❤️</span>
+                        <span class="shortcut">:heart:</span>
+                    </div>
+                    <div class="emoji-item">
+                        <span class="emoji">👍</span>
+                        <span class="shortcut">:thumbsup:</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>TIPS</h3>
+                <div class="info-content">
+                    <p>• URLs are automatically converted to clickable links</p>
+                    <p>• Click on your avatar to toggle online/offline status</p>
+                    <p>• Use the settings to clear all messages if needed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
